@@ -1,0 +1,24 @@
+.App {
+	padding: 0px;
+	margin: 0px;
+
+	.mainContent {
+		position: relative;
+		padding: 0px 0px 0px 250px;
+		transition: 0.3s all ease;
+	}
+
+	.mainContentForce {
+		padding: 0px 0px 0px 250px !important;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.App {
+	    .mainContent {
+	        padding: 0px;
+	    }
+	}
+
+}

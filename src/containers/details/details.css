@@ -1,0 +1,36 @@
+.detailsLoading {
+  padding: 20px;
+  text-align: center; }
+  .detailsLoading img {
+    width: 100px; }
+
+.detailsWrapper {
+  position: relative; }
+  .detailsWrapper h1 {
+    height: 65px;
+    line-height: 65px;
+    vertical-align: middle;
+    font-size: 25px;
+    color: #FFFFFF;
+    background: linear-gradient(#383838, #000000);
+    padding: 0px 20px;
+    border-bottom: 1px solid #383838; }
+    .detailsWrapper h1 a.toggleSideNav {
+      float: left;
+      margin-left: 0px;
+      margin-right: 20px;
+      display: none; }
+  .detailsWrapper .content {
+    padding: 10px 20px; }
+    .detailsWrapper .content .ant-card-body {
+      padding: 20px !important; }
+
+@media (max-width: 768px) {
+  .detailsWrapper h1 {
+    padding: 0px 10px; }
+    .detailsWrapper h1 a.toggleSideNav {
+      display: block; }
+  .detailsWrapper .content {
+    padding: 10px; }
+    .detailsWrapper .content label.labelDetails {
+      width: 100px; } }

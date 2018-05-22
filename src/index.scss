@@ -1,0 +1,16 @@
+@import '~antd/dist/antd.css';
+
+$backgroundColor: #dddddd;
+$backgroundImage: './containers/static/bgrepeat.jpg';
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+	background: $backgroundColor url($backgroundImage) repeat top left;
+	overflow-x: hidden;
+}
+
+#root {
+	width: 100%;
+}

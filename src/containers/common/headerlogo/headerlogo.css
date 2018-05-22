@@ -1,0 +1,26 @@
+.headerLogoWrapper {
+  color: #FFFFFF;
+  border-bottom: 1px solid #dbe5e8;
+  background: #fad157;
+  position: relative;
+  margin-bottom: 0px;
+  border-bottom: none;
+  width: 250px;
+  height: 65px; }
+  .headerLogoWrapper .contentHolder {
+    padding: 20px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center; }
+    .headerLogoWrapper .contentHolder img {
+      width: 80%; }
+  .headerLogoWrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse farthest-corner at center center, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.85) 100%) repeat scroll 0% 0%; }

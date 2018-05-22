@@ -1,0 +1,22 @@
+.infoTableHolder .ant-col-xs-24 {
+  margin-bottom: 1px;
+  background: #ededed; }
+
+.infoTableHolder label.labelDetails {
+  display: block;
+  float: left;
+  width: 150px;
+  background: #dddddd;
+  padding: 5px;
+  margin-right: 1px;
+  height: 100%;
+  font-style: italic; }
+
+.infoTableHolder span.infoDetails {
+  display: block;
+  float: left;
+  padding: 5px;
+  height: 100%; }
+  .infoTableHolder span.infoDetails ol {
+    margin: 0 0 0 20px;
+    padding: 0px; }
