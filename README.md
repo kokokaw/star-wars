@@ -1,4 +1,4 @@
-# Progress Bar Assignment (React)
+# BAMBU Frontend Engineer Test
 
 ## Getting Started
 
