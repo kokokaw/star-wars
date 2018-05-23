@@ -22,6 +22,8 @@ import {
 const InputGroup = Input.Group;
 const Option = Select.Option;
 
+const SUBSET = ['films', 'vehicles', 'species', 'starships', 'planets'];
+
 class People extends Component {
 	constructor(props){
 		super(props);
@@ -71,38 +73,25 @@ class People extends Component {
 			this.props.peopleSetDetails(people);
 		}
 
-		for(let film of people.films) {
-			const filmId = film.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
-			if (!this.props.subsetData.films[filmId]) {
-				this.props.subsetGetDetails(filmId, 'films');
+		for (let value of SUBSET) {
+			const key = (value === 'planets') ? 'homeworld' : value;
+			const subsetVal = people[key];
+			if (subsetVal instanceof Array) {
+				for(let data of subsetVal) {
+					const dataId = data.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
+					
+					if (!this.props.subsetData[value][dataId]) {
+						this.props.subsetGetDetails(dataId, value);
+					}
+				}
+			} else {
+				const dataId = subsetVal.match(/([^\/]*)\/*$/)[1];
+				if (!this.props.subsetData[value][dataId]) {
+					this.props.subsetGetDetails(dataId, value);
+				}
 			}
 		}
 
-		for(let vehicle of people.vehicles) {
-			const vehicleId = vehicle.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
-			if (!this.props.subsetData.vehicles[vehicleId]) {
-				this.props.subsetGetDetails(vehicleId, 'vehicles');
-			}
-		}
-
-		for(let species of people.species) {
-			const speciesId = species.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
-			if (!this.props.subsetData.species[speciesId]) {
-				this.props.subsetGetDetails(speciesId, 'species');
-			}
-		}
-
-		for(let starships of people.starships) {
-			const starshipsId = starships.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
-			if (!this.props.subsetData.starships[starshipsId]) {
-				this.props.subsetGetDetails(starshipsId, 'starships');
-			}
-		}
-
-		const planetsId = people.homeworld.match(/([^\/]*)\/*$/)[1]; // eslint-disable-line
-		if (!this.props.subsetData.planets[planetsId]) {
-			this.props.subsetGetDetails(planetsId, 'planets');
-		}	
 		this.props.peopleSetSelected(people.name);
 	}
 
