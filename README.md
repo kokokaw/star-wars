@@ -1,4 +1,4 @@
-# BAMBU Frontend Engineer Test
+# Progress Bar Assignment (React)
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ build source also included as a default (so you can browse the project without i
 ```
 This will generate a compressed file build under 'build/'.
 <br />
-Highly suggested to use [https://www.npmjs.com/package/http-server](http-server) to run on local machine
+Highly suggested to use [http-server](https://www.npmjs.com/package/http-server) to run on local machine
 
 ```
 > npm install http-server -g
