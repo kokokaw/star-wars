@@ -9,7 +9,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import HeaderLogo from '../common/headerlogo/HeaderLogo';
 
 /* Sub Components */
-import People from './people/People';
+import People from '../people/People';
 
 class SideNav extends Component {
 	constructor(props){

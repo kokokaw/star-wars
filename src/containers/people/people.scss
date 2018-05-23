@@ -1,0 +1,101 @@
+$backgroundImage: '../static/headertitlebg.jpg';
+
+.peopleListHolder {
+    padding-bottom: 50px; 
+
+    label {
+        display: block;
+        padding: 10px;
+        background: url($backgroundImage) #000000;
+        background-size: cover;
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+        overflow: hidden;
+        position: relative; 
+        font-size: 15px;
+        font-weight: normal;
+        color: #dddddd;
+    }
+
+    .navHolder {
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        width: 250px;
+
+        li {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 1px;
+
+            a {
+                display: block;
+                padding: 15px 10px;
+                color: #e8e8e8;
+                font-size: 14px;
+                text-decoration: none;
+                background: rgba(255, 255, 255, 0.2);
+
+                img {
+                    float: left;
+                    margin-top: -5px;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                    width: 30px;
+                }
+            }            
+
+            a i:before {
+                -webkit-transition: all 0.5s; 
+                -moz-transition: all 0.5s; 
+                -ms-transition: all 0.5s; 
+                -o-transition: all 0.5s; 
+                transition: all 0.5s;
+            }
+
+            a:hover i:before {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg); 
+                -ms-transform: rotate(45deg); 
+                -o-transition: rotate(45deg); 
+                transform: rotate(45deg); 
+            }
+        }
+        li.active {
+            a {
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+        li.loading {
+            text-align: center;
+            padding: 5px;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    .paginationHolder {
+        position: fixed;
+        bottom: 10px;
+        left: 0px;
+        width: 250px;
+        overflow: hidden;
+        transition: 0.3s all ease;
+    }
+
+    .paginationHolderForce {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .peopleListHolder {
+        .paginationHolder {
+            width: 0px;
+        }
+    }
+
+}
