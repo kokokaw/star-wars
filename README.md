@@ -1,5 +1,3 @@
-# BAMBU Frontend Engineer Test
-
 ## Getting Started
 
 To get started, first install all the necessary dependencies.
